@@ -12,7 +12,7 @@ const BlocImagePrincipale = () => {
             <div className="hero__bg">
             <img
                 src={imgChalet}
-                alt="Chalet MCS Anglès"
+                alt="Chalet  Anglès"
                 className="hero__img"
             />
             <div className="hero__overlay" />
