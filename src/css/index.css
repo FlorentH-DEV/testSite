@@ -1,6 +1,7 @@
 :root {
     --green: oklch(0.32 0.08 145);
     --green-light: oklch(0.32 0.08 145 / 0.1);
+    --green-soft: oklch(0.32 0.08 145 / 0.08);
     --gold: oklch(0.72 0.09 65);
     --text: oklch(0.22 0.02 55);
     --muted: oklch(0.52 0.02 55);

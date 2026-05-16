@@ -1,4 +1,3 @@
-import { Section } from "./Section";
 import "../../../css/adresse.css";
 import SectionPerso from "../../ui/SectionPerso";
 import SectionTitle from "../../ui/SectionTitle";

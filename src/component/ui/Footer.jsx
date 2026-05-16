@@ -15,9 +15,6 @@ const Footer = () => {
           <a href="tel:+33675489914" className="footer-phone">
             📞 Claudie : +33 6 75 48 99 14
           </a>
-          <p className="footer-note">
-            📖 Merci de laisser ce livret sur place
-          </p>
         </div>
       </div>
     </footer>

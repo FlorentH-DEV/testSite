@@ -6,6 +6,7 @@ import ADecouvrir from './item/ADecouvrir'
 import { EquipmentSection } from './item/EquipementSection'
 import DepartSection from './item/DepartSection'
 import Footer from '../ui/Footer'
+import { AdressesSection } from './item/AdresseSection'
 
 const ChaletOne = () => {
 
@@ -19,6 +20,8 @@ const ChaletOne = () => {
 
             <EquipmentSection/>
 
+            <AdressesSection/>
+            
             <ADecouvrir/>
 
             <DepartSection/>
