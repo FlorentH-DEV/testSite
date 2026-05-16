@@ -5,6 +5,7 @@ import RouterConfig from '../routerConfig/RouterConfig'
 
 const LayoutSelector = (props) => {
     console.log('1111')
+
     return (
         <Provider store={store}>
             <RouterConfig/>
