@@ -158,7 +158,7 @@ export default function DecouvrirSection() {
                     >
                         <img
                         src="https://d2xsxph8kpxj0f.cloudfront.net/310519663665931328/QWCmyRXfvy9N52MLoe92wh/lac-raviege-bCL7qQo2dsGsfoUFb4syko.webp"
-                        style={{ height: 200, objectFit: "cover" }}
+                        style={{ height: 200,  }}
                         />
 
                         <div style={{ padding: 16, display: "flex", flexDirection: "column", gap: 8 }}>
