@@ -14,20 +14,18 @@
 
 body {
   background-color: #FAF7F2;
+  width: 100%;
+  margin: 0px;
 }
 
 /* IMPORTANT: évite 100vh pour width (bug majeur) */
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 16px;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 0px;
-  }
+  padding: 0 0px;
 }
 
 
@@ -81,9 +79,10 @@ body {
 
 .grid {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  margin-right: 50px;
+  padding: 0 3%;
 }
 
 .col {
@@ -121,19 +120,26 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   height: 100%;
   gap: 10px;
-  padding: 18px;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
 }
 
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.cardContent{
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  padding: 6%;
 }
 
 .card-accent {
@@ -173,6 +179,7 @@ body {
   font-size: 16px;
   font-family: "DM Sans", sans-serif;
   color: var(--muted);
+  padding-left: 3%;
 }
 
 .section-line {
@@ -257,10 +264,13 @@ body {
 
 .badge {
   display: inline-flex;
-  align-items: center;
+  align-self: flex-start;
+
   padding: 3px 8px;
   border-radius: 999px;
-  font-size: 11px;
+
+  font-size: 14px;
+
   background: var(--green-soft);
   color: var(--green);
 }
@@ -366,3 +376,75 @@ body {
   .hero__star {
     color: oklch(0.72 0.09 65);
   }
+
+    /* =========================
+     MARCHÉ CARD
+  ========================= */
+  
+  .market-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: white;
+  }
+  
+  .market-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .market-title {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  
+  .market-km {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: var(--green-soft);
+    color: var(--green);
+  }
+
+  
+  /* =========================
+     PLACE CARD
+  ========================= */
+  
+  .place-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Fraunces", serif;
+    color: var(--text);
+  }
+
+  .adresseTitle{
+    padding-left: 3%;
+  }
+
+  .place-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .place-emoji {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  
+  .place-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Fraunces", serif;
+    color: var(--text);
+    margin: 0;
+  }
+
+  

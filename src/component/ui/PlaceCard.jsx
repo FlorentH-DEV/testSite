@@ -2,28 +2,36 @@
 const PlaceCard = ({name, description, address, phone, distance, hours, emoji}) => {
     return (
         <div className="card">
-        <div className="place-header">
-            {emoji && <span className="place-emoji">{emoji}</span>}
+            <div className="cardContent">
+                <div className="place-header">
+                    <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                        <span>{emoji}</span>
+                        <h3 className="place-title">{name}</h3>
+                    </div>
 
-            <div>
-            <h3 className="place-title">{name}</h3>
+                    <div>
 
-            {distance && (
-                <span className="badge badge-green">{distance}</span>
-            )}
+                    {distance && (
+                        <span className="badge badge-green">{distance}</span>
+                    )}
+                    </div>
+                </div>
+
+                <p className="place-desc">{description}</p>
+
+                {hours && <div className="place-desc">🕐 {hours}</div>}
+                {address && <div className="place-desc">📍 {address}</div>}
+
+                {phone && (
+                <a
+                    href={`tel:${phone.replace(/\s/g, "")}`}
+                    className="place-desc"
+                    style={{ color: "var(--green)" }}
+                >
+                    📞 {phone}
+                </a>
+                )}
             </div>
-        </div>
-
-        <p className="text">{description}</p>
-
-        {hours && <p className="meta">🕐 {hours}</p>}
-        {address && <p className="meta">📍 {address}</p>}
-
-        {phone && (
-            <a className="link" href={`tel:${phone.replace(/\s/g, "")}`}>
-            📞 {phone}
-            </a>
-        )}
         </div>
     );
 }

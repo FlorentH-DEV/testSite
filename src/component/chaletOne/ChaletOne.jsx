@@ -14,13 +14,14 @@ const ChaletOne = () => {
         <Fragment>  
             <Navbar/>
 
-            <BlocImagePrincipale/>
+
+           <BlocImagePrincipale/>
 
             <ArrivalSection/>
 
             <EquipmentSection/>
 
-            <AdressesSection/>
+            <AdressesSection/> 
             {/* 
 
 
