@@ -1,0 +1,240 @@
+/* 
+ * DESIGN PHILOSOPHY: "Chalet Alpin Moderne" — Hygge scandinave / Minimalisme montagnard
+ * Palette: Sable (#FAF7F2), Vert sapin (#2D5016), Brun châtaigne (#7C4A1E), Doré (#D4A853)
+ * Typography: Fraunces (serif organique) + DM Sans (corps) + DM Mono (adresses/téléphones)
+ * Layout: Navigation sticky top, sections pleine largeur, cartes avec hover naturel
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom chalet tokens */
+  --color-sand: #FAF7F2;
+  --color-sand-dark: #F0EAE0;
+  --color-forest: #2D5016;
+  --color-forest-light: #3D6B20;
+  --color-chestnut: #7C4A1E;
+  --color-chestnut-light: #9B6035;
+  --color-gold: #D4A853;
+  --color-gold-light: #E8C47A;
+  --color-bark: #4A3728;
+  --color-stone: #8B7D6B;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Chalet palette — light theme */
+  --background: oklch(0.98 0.008 75);        /* sable chaud */
+  --foreground: oklch(0.22 0.02 55);          /* brun foncé */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.02 55);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.02 55);
+  --primary: oklch(0.32 0.08 145);            /* vert sapin */
+  --primary-foreground: oklch(0.98 0.005 75);
+  --secondary: oklch(0.94 0.012 75);          /* sable moyen */
+  --secondary-foreground: oklch(0.35 0.04 55);
+  --muted: oklch(0.94 0.008 75);
+  --muted-foreground: oklch(0.52 0.02 55);
+  --accent: oklch(0.72 0.09 65);              /* doré */
+  --accent-foreground: oklch(0.22 0.02 55);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.012 75);
+  --input: oklch(0.92 0.008 75);
+  --ring: oklch(0.32 0.08 145);
+  --chart-1: oklch(0.32 0.08 145);
+  --chart-2: oklch(0.72 0.09 65);
+  --chart-3: oklch(0.48 0.07 55);
+  --chart-4: oklch(0.55 0.06 145);
+  --chart-5: oklch(0.65 0.05 75);
+  --sidebar: oklch(0.96 0.01 75);
+  --sidebar-foreground: oklch(0.22 0.02 55);
+  --sidebar-primary: oklch(0.32 0.08 145);
+  --sidebar-primary-foreground: oklch(0.98 0.005 75);
+  --sidebar-accent: oklch(0.94 0.012 75);
+  --sidebar-accent-foreground: oklch(0.22 0.02 55);
+  --sidebar-border: oklch(0.88 0.012 75);
+  --sidebar-ring: oklch(0.32 0.08 145);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Chalet custom components */
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: oklch(0.32 0.08 145);
+    letter-spacing: -0.02em;
+  }
+
+  .card-hover {
+    transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px oklch(0.22 0.02 55 / 0.12);
+  }
+
+  .nav-link {
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: oklch(0.35 0.03 55);
+    transition: color 150ms ease;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: oklch(0.32 0.08 145);
+    transition: width 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .nav-link:hover {
+    color: oklch(0.32 0.08 145);
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  .nav-link.active {
+    color: oklch(0.32 0.08 145);
+  }
+
+  .phone-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: oklch(0.48 0.07 55);
+  }
+
+  .badge-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  /* Fade-in-up animation for sections */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 400ms cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up {
+      animation: none;
+    }
+  }
+}
