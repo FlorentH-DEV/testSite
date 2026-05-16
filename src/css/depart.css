@@ -1,0 +1,172 @@
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* =========================
+     LAYOUT PRINCIPAL
+  ========================= */
+  
+  .depart-layout {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  /* LEFT CARD */
+  .card {
+    flex: 1 1 420px;
+    background: white;
+    border: 1px solid oklch(0.88 0.012 75);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* ACCENT CARD */
+  .card-accent {
+    background: oklch(0.32 0.08 145 / 0.06);
+    border-color: oklch(0.32 0.08 145 / 0.2);
+  }
+  
+  /* TITRE CARD */
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Fraunces", serif;
+    color: oklch(0.22 0.02 55);
+  }
+  
+  /* =========================
+     CHECKLIST
+  ========================= */
+  
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .check-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: oklch(0.35 0.03 55);
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: oklch(0.32 0.08 145 / 0.15);
+    color: oklch(0.32 0.08 145);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  
+  /* =========================
+     RIGHT COLUMN
+  ========================= */
+  
+  .depart-right {
+    flex: 1 1 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* =========================
+     NUMEROS
+  ========================= */
+  
+  .grid-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .phone-card {
+    flex: 1 1 45%;
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    background: oklch(0.94 0.008 75);
+    text-decoration: none;
+    transition: transform 0.15s ease;
+  }
+  
+  .phone-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .phone-emoji {
+    font-size: 20px;
+  }
+  
+  .phone-label {
+    font-size: 11px;
+    color: oklch(0.52 0.02 55);
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  .phone-number {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+    color: oklch(0.22 0.02 55);
+  }
+  
+  /* =========================
+     REVIEW CARD
+  ========================= */
+  
+  .review-card {
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    background: oklch(0.72 0.09 65 / 0.12);
+    border: 1px solid oklch(0.72 0.09 65 / 0.3);
+  }
+  
+  .review-star {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .review-title {
+    font-weight: 600;
+    font-family: "Fraunces", serif;
+    color: oklch(0.22 0.02 55);
+    font-size: 14px;
+  }
+  
+  .review-text {
+    font-size: 12px;
+    color: oklch(0.42 0.02 55);
+    font-family: "DM Sans", sans-serif;
+    margin-top: 4px;
+  }
+  
+  /* =========================
+     RESPONSIVE
+  ========================= */
+  
+  @media (max-width: 768px) {
+    .depart-layout {
+      flex-direction: column;
+    }
+  
+    .phone-card {
+      flex: 1 1 100%;
+    }
+  }
