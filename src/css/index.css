@@ -19,10 +19,17 @@ body {
 /* IMPORTANT: évite 100vh pour width (bug majeur) */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 16px;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 0px;
+  }
+}
+
 
 /* =========================
    SECTION SYSTEM (UNIQUE)
@@ -76,6 +83,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin-right: 50px;
 }
 
 .col {
@@ -97,6 +105,10 @@ body {
   .col-4,
   .col-span-2 {
     flex: 1 1 100%;
+  }
+
+  .grid {
+    margin-right: 0px;
   }
 }
 
