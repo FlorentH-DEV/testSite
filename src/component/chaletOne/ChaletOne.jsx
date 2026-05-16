@@ -16,7 +16,8 @@ const ChaletOne = () => {
 
             <BlocImagePrincipale/>
 
-            {/* <ArrivalSection/>
+            <ArrivalSection/>
+            {/* 
 
             <EquipmentSection/>
 

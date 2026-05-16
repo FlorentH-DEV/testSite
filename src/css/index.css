@@ -14,9 +14,11 @@
    SECTION ANIMATION
 ========================= */
 
-.section {
+  .section {
     display: flex;
     flex-direction: column;
+    align-items: center; /* 👈 IMPORTANT */
+    width: 100%;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
