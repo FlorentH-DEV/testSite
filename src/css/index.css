@@ -476,3 +476,14 @@ body {
     font-size: 32px;
     font-weight: bold;
   }
+
+  .depart-right {
+    flex: 1 1 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+
+
+

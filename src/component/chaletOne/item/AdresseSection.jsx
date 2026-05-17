@@ -198,6 +198,7 @@ export function AdressesSection() {
                     ville: "🏡 Anglès",
                     detail: "Juillet–août uniquement",
                     jour: "Mercredi matin",
+                    heure: "Mercredi matin",
                     lieu: "Place du village",
                     km: "Centre",
                     },

@@ -24,15 +24,10 @@ const ChaletOne = () => {
             <AdressesSection/> 
             
             <ADecouvrir/>
-            {/* 
-
-
-            <AdressesSection/>
-            
 
             <DepartSection/>
-
-            <Footer/> */}
+            
+            <Footer/>
         </Fragment>
     )
 }

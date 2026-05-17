@@ -3,6 +3,30 @@ import SectionPerso from "../../ui/SectionPerso";
 import SectionTitle from "../../ui/SectionTitle";
 import '../../../css/depart.css'
 
+
+function Card({
+  title,
+  emoji,
+  children,
+  distance,
+  accent,
+}) {
+  return (
+    <div className={`card ${accent ? "card-accent" : ""}`}>
+      <h3 className="card-title">
+        {emoji && <span>{emoji} </span>}
+        {title}
+        {distance && (
+          <span className="badge badge-green">{distance}</span>
+        )}
+      </h3>
+      
+
+      {children}
+    </div>
+  );
+}
+
 export default function DepartSection() {
   return (
     <SectionPerso id="depart">
@@ -13,66 +37,39 @@ export default function DepartSection() {
           title="Avant de partir"
           subtitle="Quelques étapes pour un départ en douceur."
         />
-
-        <div className="depart-layout">
-
-          {/* LEFT */}
-          <div className="card card-accent">
-            <h3 className="card-title">✅ Checklist de départ</h3>
-
-            <ul className="checklist">
-              {[
-                "Rangement rapide et nettoyage léger",
-                "Éteindre les lumières et appareils",
-                "Sortir les poubelles (container à 50m)",
-                "Tri des déchets (point recyclage à 100m)",
-                "Remettre les clés dans la boîte",
-              ].map((item) => (
-                <li key={item} className="check-item">
-                  <span className="check-icon">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* RIGHT */}
-          <div className="depart-right">
-
-            {/* NUMEROS */}
-            <div className="card">
-              <h3 className="card-title">🚨 Numéros utiles</h3>
-
-              <div className="grid-2">
-                {[
-                  { emoji: "🚒", label: "Pompiers", num: "18" },
-                  { emoji: "🚓", label: "Police", num: "17" },
-                  { emoji: "🚑", label: "SAMU", num: "15" },
-                  { emoji: "☎️", label: "Europe", num: "112" },
-                ].map((n) => (
-                  <a key={n.num} href={`tel:${n.num}`} className="phone-card">
-                    <span className="phone-emoji">{n.emoji}</span>
-                    <div>
-                      <p className="phone-label">{n.label}</p>
-                      <p className="phone-number">{n.num}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
+          <div className="grid">
+            {/* Checklist de départ */}
+            <div className="col col-3">
+              <Card emoji="✅" title="Checklist de départ">
+                  <div className="cardContent">
+                      <div className="list">
+                          <div className="list-item">✓ Rangement rapide et nettoyage léger</div>
+                          <div className="list-item">✓ Éteindre les lumières et appareils</div>
+                          <div className="list-item">✓ Sortir les poubelles (container à 50m)</div>
+                          <div className="list-item">✓ Tri des déchets (point recyclage à 100m)</div>
+                          <div className="list-item">✓ Remettre les clés dans la boîte</div>
+                      </div>
+                  </div>
+              </Card>
             </div>
 
-            {/* REVIEW */}
-            <div className="review-card">
-              <p className="review-star">⭐</p>
-              <p className="review-title">Votre avis compte beaucoup !</p>
-              <p className="review-text">
-                Un avis Airbnb nous aide énormément 🙏
-              </p>
+            {/* Numéros utiles */}
+            <div className="col col-3">
+              <Card emoji="🚨" title="Numéros utiles">
+                  <div className="cardContent">
+                      <div className="list">
+                          <div className="list-item"><li>🚒 Pompiers 18</li></div>
+                          <div className="list-item"><li>🚓 Police 17</li></div>
+                          <div className="list-item"><li>🚑 Samu 15</li></div>
+                          <div className="list-item"><li>☎️ Europe 112</li></div>
+                          <div className="list-item">⭐ Votre avis compte beaucoup !</div>
+                          <div className="list-item">Un avis Airbnb nous aide énormément 🙏</div>
+                      </div>
+                  </div>
+              </Card>
             </div>
 
           </div>
-
-        </div>
       </div>
     </SectionPerso>
   );
