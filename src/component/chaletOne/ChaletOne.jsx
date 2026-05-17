@@ -22,12 +22,13 @@ const ChaletOne = () => {
             <EquipmentSection/>
 
             <AdressesSection/> 
+            
+            <ADecouvrir/>
             {/* 
 
 
             <AdressesSection/>
             
-            <ADecouvrir/>
 
             <DepartSection/>
 
