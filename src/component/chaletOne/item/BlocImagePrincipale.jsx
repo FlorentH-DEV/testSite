@@ -3,11 +3,26 @@ import imgChalet from '../../../image/chalet1/chalet1.png'
 import '../../../css/blocImagePrincipale.css'
 
 const BlocImagePrincipale = () => {
+    const openRouteMap = () => {
+        const destination = encodeURIComponent("43.568676, 2.569415"); // Chalet 1
+        const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}&travelmode=driving`;
+    
+        window.open(url, "_blank");
+    };
+
+    const openRouteWaze = () => {
+        const lat = 43.568676;
+        const lng = 2.569415;
+    
+        const url = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
+    
+        window.open(url, "_blank");
+    };
+
     return (
         <Fragment>
             {/* HERO — Bienvenue */}
             <section id="bienvenue" className="hero">
-
                 {/* Background image */}
                 <div className="hero__bg">
                     <img
@@ -18,15 +33,11 @@ const BlocImagePrincipale = () => {
                     <div className="hero__overlay" />
                 </div>
 
+                
+
                 {/* Content */}
                 <div className="container hero__content">
                     <div className="hero__inner">
-
-                        {/* Badge */}
-                        <div className="hero__badge">
-                        📍 13 Le Salvan Bas, 81260 Anglès
-                        </div>
-
                         {/* Title */}
                         <h1 className="hero__title">
                         🎉 Bienvenue dans<br />
@@ -52,6 +63,15 @@ const BlocImagePrincipale = () => {
                             {item}
                             </div>
                         ))}
+                        </div>
+
+                        <div className='contentBtnDirection'>
+                            <button className="btn-direction" onClick={openRouteMap}>
+                                🚗 Direction le chalet ➤ Map
+                            </button>
+                            <button className="btn-direction" onClick={openRouteWaze}>
+                                🚗 Direction le chalet ➤ Waze
+                            </button>
                         </div>
 
                     </div>
