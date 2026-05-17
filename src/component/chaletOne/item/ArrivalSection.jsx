@@ -55,38 +55,6 @@ const ArrivalSection = () => {
                     </Card>
                 </div>
 
-                {/* ACCÈS */}
-                <div className="col col-4">
-                    <Card>
-                        <div className="cardContent">
-                            <h3>🚪 Comment entrer</h3>
-
-                            <div className="list">
-
-                                <div className="list-item">
-                                    <div className="circle">1</div>
-                                    Localisez la boîte à clés : face au garage, à droite sur le portillon en bois sous la terrasse
-                                </div>
-
-                                <div className="list-item">
-                                    <div className="circle">2</div>
-                                    Entrez le code (communiqué par l'hôte)
-                                </div>
-
-                                <div className="list-item">
-                                    <div className="circle">3</div>
-                                    Prenez les clés et refermez la boîte
-                                </div>
-
-                            </div>
-
-                            <div className="highlight">
-                                💡 Pensez à remettre les clés au même endroit lors du départ si Claudie n'est pas présente.
-                            </div>
-                        </div>
-                    </Card>
-                </div>
-
                 {/* Horaire */}
                 <div className="col col-4">
                     <Card>

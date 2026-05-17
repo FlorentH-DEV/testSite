@@ -61,14 +61,37 @@ export function AdressesSection() {
 
               <div className="grid">
                 <div className="col col-3">
-                    <PlaceCard
+                  <PlaceCard
+                  emoji="🌶️"
+                  name="Les Épicuriens — Tapas"
+                  description="Restaurant raffiné dans un joli village de montagne, parfait pour un repas gastronomique ou un dîner romantique."
+                  address=" 1 Rue de la Mairie, 34330 Le Soulié"
+                  phone="06 84 44 15 56"
+                  distance="Alentours"
+                  />
+                </div>
+
+                <div className="col col-3">
+                  <PlaceCard
+                  emoji="🌊"
+                  name="Lake Café Raviège"
+                  description="Ambiance détendue au bord du lac, idéal pour déjeuner en terrasse avec des plats variés tirant parti des produits locaux."
+                  address="69 chemin de la Plage, 81260 Anglès"
+                  phone="06 82 39 21 54"
+                  distance="10 min"
+                  hours="Mai à octobre"
+                  />
+                </div>
+
+                <div className="col col-3">
+                  <PlaceCard
                     emoji="🍽️"
                     name="Cuivres & Coquelicots"
                     description="Très bon restaurant local à Anglès. Cuisine française de saison dans un cadre simple et convivial, parfait pour un déjeuner ou dîner après une sortie nature."
                     address="406 Rte de Saint-Pons, 81260 Anglès"
                     phone="09 86 22 39 97"
                     distance="À Anglès"
-                    />
+                  />
                 </div>
 
                 <div className="col col-3">
@@ -79,17 +102,6 @@ export function AdressesSection() {
                     address="8 Pl. de l'Hôtel de ville, 81260 Brassac"
                     phone="05 63 74 00 31"
                     distance="≈ 9 km"
-                    />
-                </div>
-
-                <div className="col col-3">
-                    <PlaceCard
-                    emoji="🌶️"
-                    name="Les Épicuriens — Tapas"
-                    description="Restaurant raffiné dans un joli village de montagne, parfait pour un repas gastronomique ou un dîner romantique."
-                    address=" 1 Rue de la Mairie, 34330 Le Soulié"
-                    phone="06 84 44 15 56"
-                    distance="Alentours"
                     />
                 </div>
 
@@ -112,18 +124,6 @@ export function AdressesSection() {
                     address="81320 Nages"
                     phone="06 11 04 62 37"
                     distance="Alentours"
-                    />
-                </div>
-
-                <div className="col col-3">
-                    <PlaceCard
-                    emoji="🌊"
-                    name="Lake Café Raviège"
-                    description="Ambiance détendue au bord du lac, idéal pour déjeuner en terrasse avec des plats variés tirant parti des produits locaux."
-                    address="69 chemin de la Plage, 81260 Anglès"
-                    phone="06 82 39 21 54"
-                    distance="10 min"
-                    hours="Mai à octobre"
                     />
                 </div>
               </div>

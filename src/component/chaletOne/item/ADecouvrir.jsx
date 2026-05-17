@@ -68,6 +68,7 @@ export default function DecouvrirSection() {
                     <div
                         style={{
                         border: "1px solid #e5e5e5",
+                        height: '100%',
                         borderRadius: 12,
                         overflow: "hidden",
                         background: "white",
@@ -97,6 +98,7 @@ export default function DecouvrirSection() {
                             <p>🏖️ Plages et baignade</p>
                             <p>🚴 Tour du lac</p>
                             <p>🛶 Paddle & kayak</p>
+                            <p>🚤 Lac navigable (activité aquatique / location bateau / ski nautique)</p>
                         </div>
                         </div>
                     </div>
@@ -108,6 +110,7 @@ export default function DecouvrirSection() {
                         border: "1px solid #e5e5e5",
                         borderRadius: 12,
                         overflow: "hidden",
+                        height: '100%',
                         background: "white",
                         display: "flex",
                         flexDirection: "column",
@@ -135,6 +138,7 @@ export default function DecouvrirSection() {
                             <p>🏖️ Baignade non autorisée</p>
                             <p>Spot de pêche réputé</p>
                             <p>Balades sur les sentiers forestiers</p>
+                            <p>🚤 Lac navigable</p>
                         </div>
                         </div>
                     </div>
@@ -146,6 +150,7 @@ export default function DecouvrirSection() {
                         border: "1px solid #e5e5e5",
                         borderRadius: 12,
                         overflow: "hidden",
+                        height: '100%',
                         background: "white",
                         display: "flex",
                         flexDirection: "column",
