@@ -7,6 +7,7 @@ import { EquipmentSection } from './item/EquipementSection'
 import DepartSection from './item/DepartSection'
 import Footer from '../ui/Footer'
 import { AdressesSection } from './item/AdresseSection'
+import ImageCarouselModal from './item/ImageCarrousselModal'
 
 const ChaletOne = () => {
 
@@ -14,8 +15,9 @@ const ChaletOne = () => {
         <Fragment>  
             <Navbar/>
 
+            <ImageCarouselModal/>
 
-           <BlocImagePrincipale/>
+            <BlocImagePrincipale/>
 
             <ArrivalSection/>
 

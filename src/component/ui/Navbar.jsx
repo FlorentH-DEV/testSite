@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Home } from "lucide-react";
 import '../../css/navbar.css'
+import { useDispatch } from "react-redux";
+import { dispatch_toogleModal } from "../../redux/slices/modalSlice";
 
 const navItems = [
   { id: "bienvenue", label: "Bienvenue" },
@@ -15,6 +17,8 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("bienvenue");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,6 +68,8 @@ export default function Navbar() {
               <span className="logo__sub">Anglès, Tarn</span>
             </span>
           </button>
+          
+          <div style={{paddingRight: '3%'}}><button className="contact" onClick={() => {dispatch(dispatch_toogleModal())}}>Photos Chalet</button></div>
 
           {/* Desktop nav */}
           <div className="nav desktop">
@@ -111,10 +117,10 @@ export default function Navbar() {
                 {item.label}
               </button>
             ))}
-
-            <a href="tel:+33675489914" className="mobile__contact">
-              📞 Appeler Claudie : +33 6 75 48 99 14
-            </a>
+            <button className="mobile__contact" onClick={() => {dispatch(dispatch_toogleModal())}}>Photos Chalet</button>
+            <button  className="mobile__contact">
+              <a href="tel:+33675489914" className="mobile__contact">📞 Appeler Claudie : +33 6 75 48 99 14</a>
+            </button>
           </div>
         </div>
       )}
