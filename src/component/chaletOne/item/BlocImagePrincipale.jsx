@@ -69,6 +69,7 @@ const BlocImagePrincipale = () => {
                             <button className="btn-direction" onClick={openRouteMap}>
                                 🚗 Direction le chalet ➤ Map
                             </button>
+                            
                             <button className="btn-direction" onClick={openRouteWaze}>
                                 🚗 Direction le chalet ➤ Waze
                             </button>

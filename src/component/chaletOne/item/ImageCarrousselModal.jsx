@@ -3,10 +3,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { dispatch_toogleModal } from "../../../redux/slices/modalSlice";
 
 const images = [
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-  "https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8",
-  "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
+    "/imagesChalet1/1.png",
+    "/imagesChalet1/2.png",
+    "/imagesChalet1/3.png",
+    "/imagesChalet1/4.png",
+    "/imagesChalet1/5.png",
+    "/imagesChalet1/6.png",
+    "/imagesChalet1/7.png",
+    "/imagesChalet1/8.png",
+    "/imagesChalet1/9.png",
+    "/imagesChalet1/10.png",
+    "/imagesChalet1/11.png",
+    "/imagesChalet1/12.png",
+    "/imagesChalet1/13.png",
 ];
 
 const ImageCarouselModal = () => {
